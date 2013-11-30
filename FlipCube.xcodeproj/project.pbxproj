@@ -18,6 +18,9 @@
 		25F07ED918499E7200F9C5AE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25F07ED818499E7200F9C5AE /* Default-568h@2x.png */; };
 		25F07EDC18499E7200F9C5AE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F07EDA18499E7200F9C5AE /* MainStoryboard.storyboard */; };
 		25F07EDF18499E7200F9C5AE /* FCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F07EDE18499E7200F9C5AE /* FCViewController.m */; };
+		25F07EE71849A03300F9C5AE /* FCCubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F07EE61849A03300F9C5AE /* FCCubeViewController.m */; };
+		25F07EEA1849A07100F9C5AE /* FCCubeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F07EE91849A07100F9C5AE /* FCCubeView.m */; };
+		25F07EED1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F07EEC1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,12 @@
 		25F07EDB18499E7200F9C5AE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		25F07EDD18499E7200F9C5AE /* FCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCViewController.h; sourceTree = "<group>"; };
 		25F07EDE18499E7200F9C5AE /* FCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCViewController.m; sourceTree = "<group>"; };
+		25F07EE51849A03300F9C5AE /* FCCubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCubeViewController.h; sourceTree = "<group>"; };
+		25F07EE61849A03300F9C5AE /* FCCubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCubeViewController.m; sourceTree = "<group>"; };
+		25F07EE81849A07100F9C5AE /* FCCubeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCubeView.h; sourceTree = "<group>"; };
+		25F07EE91849A07100F9C5AE /* FCCubeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCubeView.m; sourceTree = "<group>"; };
+		25F07EEB1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCOrthoPanGestureRecognizer.h; sourceTree = "<group>"; };
+		25F07EEC1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCOrthoPanGestureRecognizer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +95,12 @@
 				25F07ED118499E7200F9C5AE /* FCAppDelegate.h */,
 				25F07ED218499E7200F9C5AE /* FCAppDelegate.m */,
 				25F07EDA18499E7200F9C5AE /* MainStoryboard.storyboard */,
+				25F07EEB1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.h */,
+				25F07EEC1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.m */,
+				25F07EE51849A03300F9C5AE /* FCCubeViewController.h */,
+				25F07EE61849A03300F9C5AE /* FCCubeViewController.m */,
+				25F07EE81849A07100F9C5AE /* FCCubeView.h */,
+				25F07EE91849A07100F9C5AE /* FCCubeView.m */,
 				25F07EDD18499E7200F9C5AE /* FCViewController.h */,
 				25F07EDE18499E7200F9C5AE /* FCViewController.m */,
 				25F07EC918499E7200F9C5AE /* Supporting Files */,
@@ -177,6 +192,9 @@
 				25F07ECF18499E7200F9C5AE /* main.m in Sources */,
 				25F07ED318499E7200F9C5AE /* FCAppDelegate.m in Sources */,
 				25F07EDF18499E7200F9C5AE /* FCViewController.m in Sources */,
+				25F07EE71849A03300F9C5AE /* FCCubeViewController.m in Sources */,
+				25F07EEA1849A07100F9C5AE /* FCCubeView.m in Sources */,
+				25F07EED1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +278,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlipCube/FlipCube-Prefix.pch";
 				INFOPLIST_FILE = "FlipCube/FlipCube-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -271,6 +290,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlipCube/FlipCube-Prefix.pch";
 				INFOPLIST_FILE = "FlipCube/FlipCube-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
