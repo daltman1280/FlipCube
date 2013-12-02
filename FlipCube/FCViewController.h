@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FCCubeView.h"
 
 @interface FCViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet FCCubeView *CubeView;
+@property CGPoint		initialPoint;
 @end

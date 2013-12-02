@@ -7,6 +7,7 @@
 //
 
 #import "FCViewController.h"
+#import "FCOrthoPanGestureRecognizer.h"
 
 @interface FCViewController ()
 
@@ -26,4 +27,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)handlePanGestureRecognizer:(FCOrthoPanGestureRecognizer *)gestureRecognizer {
+	UIView *view = gestureRecognizer.view;
+	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {     // beginning a pan
+		self.initialPoint = [gestureRecognizer locationInView:view];
+	} else if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
+		self.CubeView.rotationDirection = gestureRecognizer.direction;
+		float rotationAngle = gestureRecognizer.direction == FCHorizontal ?
+		([gestureRecognizer locationInView:view].x - self.initialPoint.x) / 250. : ([gestureRecognizer locationInView:view].y - self.initialPoint.y) / 250.;
+		self.CubeView.rotationInRadians = rotationAngle;
+		[self.CubeView setNeedsDisplay];
+	} else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+		self.CubeView.rotationInRadians = 0;
+		[self.CubeView setNeedsDisplay];
+	}
+}
+
+- (void)viewDidUnload {
+	[self setCubeView:nil];
+	[super viewDidUnload];
+}
 @end
