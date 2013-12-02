@@ -15,8 +15,12 @@
 
 @interface FCFlippingCubeLayerContainer : CALayer
 
-@property	FCFlippingCubeLayer*			flippingCubeLayer;
-@property	FCFlippingCubeLayer*			flippingCubeLayerLagging;
+@property	FCFlippingCubeLayer*			faceTop;
+@property	FCFlippingCubeLayer*			faceLeft;
+@property	FCFlippingCubeLayer*			faceBottom;
+@property	FCFlippingCubeLayer*			faceFront;
+@property	FCFlippingCubeLayer*			faceBack;
+@property	FCFlippingCubeLayer*			faceRight;
 
 @end
 
