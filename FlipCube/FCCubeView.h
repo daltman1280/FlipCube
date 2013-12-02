@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import "FCOrthoPanGestureRecognizer.h"
+
+@interface FCFlippingCubeLayer : CALayer
+@end
+
+@interface FCFlippingCubeLayerContainer : CALayer
+
+@property	FCFlippingCubeLayer*			flippingCubeLayer;
+@property	FCFlippingCubeLayer*			flippingCubeLayerLagging;
+
+@end
 
 @interface FCCubeView : UIView
-
+@property	FCFlippingCubeLayerContainer*	flippingCubeLayerContainer;
+@property	float							rotationInRadians;
+@property	FCDirection						rotationDirection;
 @end
