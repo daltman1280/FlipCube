@@ -21,6 +21,14 @@
 		25F07EE71849A03300F9C5AE /* FCCubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F07EE61849A03300F9C5AE /* FCCubeViewController.m */; };
 		25F07EEA1849A07100F9C5AE /* FCCubeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F07EE91849A07100F9C5AE /* FCCubeView.m */; };
 		25F07EED1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F07EEC1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.m */; };
+		25F07EF41849A4D800F9C5AE /* FCMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F07EF31849A4D800F9C5AE /* FCMainView.m */; };
+		25F07EF8184C107900F9C5AE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F07EF7184C107900F9C5AE /* QuartzCore.framework */; };
+		25F07F04184C4A0400F9C5AE /* chart1.png in Resources */ = {isa = PBXBuildFile; fileRef = 25F07EFE184C4A0400F9C5AE /* chart1.png */; };
+		25F07F05184C4A0400F9C5AE /* chart2.png in Resources */ = {isa = PBXBuildFile; fileRef = 25F07EFF184C4A0400F9C5AE /* chart2.png */; };
+		25F07F06184C4A0400F9C5AE /* chart3.png in Resources */ = {isa = PBXBuildFile; fileRef = 25F07F00184C4A0400F9C5AE /* chart3.png */; };
+		25F07F07184C4A0400F9C5AE /* chart4.png in Resources */ = {isa = PBXBuildFile; fileRef = 25F07F01184C4A0400F9C5AE /* chart4.png */; };
+		25F07F08184C4A0400F9C5AE /* chart5.png in Resources */ = {isa = PBXBuildFile; fileRef = 25F07F02184C4A0400F9C5AE /* chart5.png */; };
+		25F07F09184C4A0400F9C5AE /* chart6.png in Resources */ = {isa = PBXBuildFile; fileRef = 25F07F03184C4A0400F9C5AE /* chart6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +54,15 @@
 		25F07EE91849A07100F9C5AE /* FCCubeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCubeView.m; sourceTree = "<group>"; };
 		25F07EEB1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCOrthoPanGestureRecognizer.h; sourceTree = "<group>"; };
 		25F07EEC1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCOrthoPanGestureRecognizer.m; sourceTree = "<group>"; };
+		25F07EF21849A4D800F9C5AE /* FCMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCMainView.h; sourceTree = "<group>"; };
+		25F07EF31849A4D800F9C5AE /* FCMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCMainView.m; sourceTree = "<group>"; };
+		25F07EF7184C107900F9C5AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		25F07EFE184C4A0400F9C5AE /* chart1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart1.png; sourceTree = "<group>"; };
+		25F07EFF184C4A0400F9C5AE /* chart2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart2.png; sourceTree = "<group>"; };
+		25F07F00184C4A0400F9C5AE /* chart3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart3.png; sourceTree = "<group>"; };
+		25F07F01184C4A0400F9C5AE /* chart4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart4.png; sourceTree = "<group>"; };
+		25F07F02184C4A0400F9C5AE /* chart5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart5.png; sourceTree = "<group>"; };
+		25F07F03184C4A0400F9C5AE /* chart6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F07EF8184C107900F9C5AE /* QuartzCore.framework in Frameworks */,
 				25F07EC318499E7200F9C5AE /* UIKit.framework in Frameworks */,
 				25F07EC518499E7200F9C5AE /* Foundation.framework in Frameworks */,
 				25F07EC718499E7200F9C5AE /* CoreGraphics.framework in Frameworks */,
@@ -65,6 +83,7 @@
 		25F07EB318499E7200F9C5AE = {
 			isa = PBXGroup;
 			children = (
+				25F07EF7184C107900F9C5AE /* QuartzCore.framework */,
 				25F07EC818499E7200F9C5AE /* FlipCube */,
 				25F07EC118499E7200F9C5AE /* Frameworks */,
 				25F07EBF18499E7200F9C5AE /* Products */,
@@ -97,6 +116,8 @@
 				25F07EDA18499E7200F9C5AE /* MainStoryboard.storyboard */,
 				25F07EEB1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.h */,
 				25F07EEC1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.m */,
+				25F07EF21849A4D800F9C5AE /* FCMainView.h */,
+				25F07EF31849A4D800F9C5AE /* FCMainView.m */,
 				25F07EE51849A03300F9C5AE /* FCCubeViewController.h */,
 				25F07EE61849A03300F9C5AE /* FCCubeViewController.m */,
 				25F07EE81849A07100F9C5AE /* FCCubeView.h */,
@@ -118,6 +139,12 @@
 				25F07ED418499E7200F9C5AE /* Default.png */,
 				25F07ED618499E7200F9C5AE /* Default@2x.png */,
 				25F07ED818499E7200F9C5AE /* Default-568h@2x.png */,
+				25F07EFE184C4A0400F9C5AE /* chart1.png */,
+				25F07EFF184C4A0400F9C5AE /* chart2.png */,
+				25F07F00184C4A0400F9C5AE /* chart3.png */,
+				25F07F01184C4A0400F9C5AE /* chart4.png */,
+				25F07F02184C4A0400F9C5AE /* chart5.png */,
+				25F07F03184C4A0400F9C5AE /* chart6.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -179,6 +206,12 @@
 				25F07ED718499E7200F9C5AE /* Default@2x.png in Resources */,
 				25F07ED918499E7200F9C5AE /* Default-568h@2x.png in Resources */,
 				25F07EDC18499E7200F9C5AE /* MainStoryboard.storyboard in Resources */,
+				25F07F04184C4A0400F9C5AE /* chart1.png in Resources */,
+				25F07F05184C4A0400F9C5AE /* chart2.png in Resources */,
+				25F07F06184C4A0400F9C5AE /* chart3.png in Resources */,
+				25F07F07184C4A0400F9C5AE /* chart4.png in Resources */,
+				25F07F08184C4A0400F9C5AE /* chart5.png in Resources */,
+				25F07F09184C4A0400F9C5AE /* chart6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +228,7 @@
 				25F07EE71849A03300F9C5AE /* FCCubeViewController.m in Sources */,
 				25F07EEA1849A07100F9C5AE /* FCCubeView.m in Sources */,
 				25F07EED1849A17000F9C5AE /* FCOrthoPanGestureRecognizer.m in Sources */,
+				25F07EF41849A4D800F9C5AE /* FCMainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +276,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -264,7 +298,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;

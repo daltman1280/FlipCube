@@ -19,6 +19,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	// receive orientation change notifications
+}
+
+//	center the cubeview, even on startup
+
+- (void)viewDidLayoutSubviews
+{
+	self.CubeView.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+	self.CubeView.center = CGPointMake(self.view.bounds.size.height/2, self.view.bounds.size.width/2);			// do the reverse, because it hasn't rotated yet
 }
 
 - (void)didReceiveMemoryWarning
