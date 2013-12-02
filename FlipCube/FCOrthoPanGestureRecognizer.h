@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+	FCHorizontal,
+	FCVertical
+} FCDirection;
+
 @interface FCOrthoPanGestureRecognizer : UIPanGestureRecognizer
+
+@property CGPoint		startPoint;
+@property FCDirection	direction;
+@property BOOL			firstTouchMove;
 
 @end
