@@ -39,7 +39,7 @@
 	layer.position = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
 //	layer.opacity = 0.5;						// so we can see lagging face
 	layer.borderColor = [UIColor blackColor].CGColor;
-	layer.borderWidth = 2;
+	layer.borderWidth = 1;
 	layer.hidden = YES;
 	return layer;
 }
@@ -85,7 +85,7 @@
 	float height = self.bounds.size.height/2.0;
 	float x = self.rotationDirection == FCHorizontal ? width*sinf(rotationInRadians) : 0;
 	float y = self.rotationDirection == FCVertical ? height*sinf(rotationInRadians) : 0;
-	float z = self.rotationDirection == FCHorizontal ? -(1.0 - sinf(rotationInRadians+M_PI_2))*height : -(1.0 - sinf(rotationInRadians+M_PI_2))*width;
+	float z = self.rotationDirection == FCHorizontal ? -(1.0 - sinf(rotationInRadians+M_PI_2))*width : -(1.0 - sinf(rotationInRadians+M_PI_2))*height;
 	// translate in 3D to reflect rotation about cube center
 	CATransform3D transformTranslated = CATransform3DTranslate(CATransform3DIdentity, x, y, z);
 	// rotate about horizontal or vertical axis
@@ -97,29 +97,37 @@
 
 - (void)setRotationInRadians:(float)rotationInRadians
 {
-	if (rotationInRadians > M_PI_2) rotationInRadians = M_PI_2;					// temporary
+//	NSLog(@"rotation = %f", rotationInRadians);
+	static float magic = 0.14;
+	if (rotationInRadians > +M_PI_2) rotationInRadians = +M_PI_2;					// temporary
+	if (rotationInRadians < -M_PI_2) rotationInRadians = -M_PI_2;					// temporary
 	_rotationInRadians = rotationInRadians;
 	[self transformFace:self.flippingCubeLayerContainer.faceFront rotation:rotationInRadians];
 	if (self.rotationDirection == FCVertical) {
-		[self transformFace:self.flippingCubeLayerContainer.faceTop rotation:rotationInRadians-M_PI_2];
-		[self transformFace:self.flippingCubeLayerContainer.faceBottom rotation:rotationInRadians+M_PI_2];
-		self.flippingCubeLayerContainer.faceLeft.hidden = YES;
-		self.flippingCubeLayerContainer.faceRight.hidden = YES;
-		self.flippingCubeLayerContainer.faceTop.hidden = NO;
-		self.flippingCubeLayerContainer.faceBottom.hidden = NO;
+		if (rotationInRadians > +magic) [self transformFace:self.flippingCubeLayerContainer.faceTop rotation:rotationInRadians-M_PI_2];
+		if (rotationInRadians < -magic) [self transformFace:self.flippingCubeLayerContainer.faceBottom rotation:rotationInRadians+M_PI_2];
+		self.flippingCubeLayerContainer.faceLeft.hidden =	YES;
+		self.flippingCubeLayerContainer.faceRight.hidden =	YES;
+		self.flippingCubeLayerContainer.faceTop.hidden =	rotationInRadians > +magic ? NO : YES;
+		self.flippingCubeLayerContainer.faceBottom.hidden = rotationInRadians < -magic ? NO : YES;
 	} else {
-		[self transformFace:self.flippingCubeLayerContainer.faceLeft rotation:rotationInRadians-M_PI_2];
-		[self transformFace:self.flippingCubeLayerContainer.faceRight rotation:rotationInRadians+M_PI_2];
-		self.flippingCubeLayerContainer.faceLeft.hidden = NO;
-		self.flippingCubeLayerContainer.faceRight.hidden = NO;
-		self.flippingCubeLayerContainer.faceTop.hidden = YES;
-		self.flippingCubeLayerContainer.faceBottom.hidden = YES;
+		if (rotationInRadians > +magic) [self transformFace:self.flippingCubeLayerContainer.faceLeft rotation:rotationInRadians-M_PI_2];
+		if (rotationInRadians < -magic) [self transformFace:self.flippingCubeLayerContainer.faceRight rotation:rotationInRadians+M_PI_2];
+		self.flippingCubeLayerContainer.faceLeft.hidden =	rotationInRadians > +magic ? NO : YES;
+		self.flippingCubeLayerContainer.faceRight.hidden =	rotationInRadians < -magic ? NO : YES;
+		self.flippingCubeLayerContainer.faceTop.hidden =	YES;
+		self.flippingCubeLayerContainer.faceBottom.hidden =	YES;
 	}
 }
 
 - (float)rotationInRadians
 {
 	return _rotationInRadians;
+}
+
+- (void)drawRect:(CGRect)rect
+{
+	
 }
 
 @end

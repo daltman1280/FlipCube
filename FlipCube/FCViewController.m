@@ -22,6 +22,16 @@
 	// receive orientation change notifications
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+	return UIInterfaceOrientationMaskAll;
+}
+
+- (BOOL)shouldAutorotate
+{
+	return YES;
+}
+
 //	center the cubeview, even on startup
 
 - (void)viewDidLayoutSubviews
@@ -32,6 +42,11 @@
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
 	self.CubeView.center = CGPointMake(self.view.bounds.size.height/2, self.view.bounds.size.width/2);			// do the reverse, because it hasn't rotated yet
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation;
+{
+	return YES;
 }
 
 - (void)didReceiveMemoryWarning

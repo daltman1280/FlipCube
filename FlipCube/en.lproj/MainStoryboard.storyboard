@@ -18,7 +18,7 @@
                             <view contentMode="scaleToFill" id="vjS-CN-Ckd" customClass="FCCubeView">
                                 <rect key="frame" x="191" y="356" width="385" height="292"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98967689280000004" green="0.68767571449999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
