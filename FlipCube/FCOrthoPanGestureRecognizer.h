@@ -7,16 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef enum {
-	FCHorizontal,
-	FCVertical
-} FCDirection;
+#import "FCCubeView.h"
+#import "FCDirection.h"
 
 @interface FCOrthoPanGestureRecognizer : UIPanGestureRecognizer
 
 @property CGPoint		startPoint;
 @property FCDirection	direction;
 @property BOOL			firstTouchMove;
+@property (weak, nonatomic) IBOutlet FCCubeView *cubeView;
 
 @end
