@@ -63,6 +63,7 @@
 		25F07F01184C4A0400F9C5AE /* chart4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart4.png; sourceTree = "<group>"; };
 		25F07F02184C4A0400F9C5AE /* chart5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart5.png; sourceTree = "<group>"; };
 		25F07F03184C4A0400F9C5AE /* chart6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart6.png; sourceTree = "<group>"; };
+		25F07F0A184D752700F9C5AE /* FCDirection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FCDirection.h; path = FlipCube/FCDirection.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		25F07EB318499E7200F9C5AE = {
 			isa = PBXGroup;
 			children = (
+				25F07F0A184D752700F9C5AE /* FCDirection.h */,
 				25F07EF7184C107900F9C5AE /* QuartzCore.framework */,
 				25F07EC818499E7200F9C5AE /* FlipCube */,
 				25F07EC118499E7200F9C5AE /* Frameworks */,
