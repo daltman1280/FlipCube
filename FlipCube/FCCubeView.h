@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "FCOrthoPanGestureRecognizer.h"
+#import "FCDirection.h"
 
 @interface FCFlippingCubeLayer : CALayer
 @end
@@ -27,5 +27,11 @@
 @interface FCCubeView : UIView
 @property	FCFlippingCubeLayerContainer*	flippingCubeLayerContainer;
 @property	float							rotationInRadians;
+@property	float							previousRotationInRadians;					// so we know which direction the cube was previously turned
 @property	FCDirection						rotationDirection;
+@property	BOOL							isAnimating;
+
+- (void)startAnimation;
+- (void)disableAnimation;
+
 @end
