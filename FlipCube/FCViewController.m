@@ -57,16 +57,18 @@
 
 - (IBAction)handlePanGestureRecognizer:(FCOrthoPanGestureRecognizer *)gestureRecognizer {
 	UIView *view = gestureRecognizer.view;
-	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {     // beginning a pan
+	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {					// beginning a pan
+		[self.CubeView disableAnimation];
 		self.initialPoint = [gestureRecognizer locationInView:view];
-	} else if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
+	} else if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {		// continuing a pan
 		self.CubeView.rotationDirection = gestureRecognizer.direction;
-		float rotationAngle = gestureRecognizer.direction == FCHorizontal ?
-		([gestureRecognizer locationInView:view].x - self.initialPoint.x) / 250. : ([gestureRecognizer locationInView:view].y - self.initialPoint.y) / 250.;
+		float rotationAngle = gestureRecognizer.direction == FCHorizontal ?			// calculate rotation angle using arbitrary movement scaling
+		([gestureRecognizer locationInView:view].x - self.initialPoint.x) / 150. : ([gestureRecognizer locationInView:view].y - self.initialPoint.y) / 150.;
 		self.CubeView.rotationInRadians = rotationAngle;
 		[self.CubeView setNeedsDisplay];
-	} else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
-		self.CubeView.rotationInRadians = 0;
+	} else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {			// finishing a pan
+		[self.CubeView startAnimation];
+		self.CubeView.rotationInRadians = 0.0;
 		[self.CubeView setNeedsDisplay];
 	}
 }
@@ -75,4 +77,5 @@
 	[self setCubeView:nil];
 	[super viewDidUnload];
 }
+
 @end
