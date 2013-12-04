@@ -34,12 +34,33 @@
                 <panGestureRecognizer minimumNumberOfTouches="1" id="Uk8-oM-fKm" customClass="FCOrthoPanGestureRecognizer">
                     <connections>
                         <action selector="handlePanGestureRecognizer:" destination="2" id="6K6-YX-9kL"/>
+                        <outlet property="cubeView" destination="vjS-CN-Ckd" id="P3X-F8-P86"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-223" y="-41"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="FCCubeView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FCCubeView.h"/>
+        </class>
+        <class className="FCMainView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FCMainView.h"/>
+        </class>
+        <class className="FCOrthoPanGestureRecognizer" superclassName="UIPanGestureRecognizer">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FCOrthoPanGestureRecognizer.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cubeView" candidateClass="FCCubeView"/>
+            </relationships>
+        </class>
+        <class className="FCViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FCViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="CubeView" candidateClass="FCCubeView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
