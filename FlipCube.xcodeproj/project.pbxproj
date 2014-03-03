@@ -63,7 +63,8 @@
 		25F07F01184C4A0400F9C5AE /* chart4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart4.png; sourceTree = "<group>"; };
 		25F07F02184C4A0400F9C5AE /* chart5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart5.png; sourceTree = "<group>"; };
 		25F07F03184C4A0400F9C5AE /* chart6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart6.png; sourceTree = "<group>"; };
-		25F07F0A184D752700F9C5AE /* FCDirection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FCDirection.h; path = FlipCube/FCDirection.h; sourceTree = "<group>"; };
+		25F07F0A184D752700F9C5AE /* FCDirection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCDirection.h; sourceTree = "<group>"; };
+		25F41D3318C5115E0054BDFB /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +85,7 @@
 		25F07EB318499E7200F9C5AE = {
 			isa = PBXGroup;
 			children = (
-				25F07F0A184D752700F9C5AE /* FCDirection.h */,
-				25F07EF7184C107900F9C5AE /* QuartzCore.framework */,
+				25F41D3318C5115E0054BDFB /* Read Me.rtf */,
 				25F07EC818499E7200F9C5AE /* FlipCube */,
 				25F07EC118499E7200F9C5AE /* Frameworks */,
 				25F07EBF18499E7200F9C5AE /* Products */,
@@ -106,6 +106,7 @@
 				25F07EC218499E7200F9C5AE /* UIKit.framework */,
 				25F07EC418499E7200F9C5AE /* Foundation.framework */,
 				25F07EC618499E7200F9C5AE /* CoreGraphics.framework */,
+				25F07EF7184C107900F9C5AE /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,6 +114,7 @@
 		25F07EC818499E7200F9C5AE /* FlipCube */ = {
 			isa = PBXGroup;
 			children = (
+				25F07F0A184D752700F9C5AE /* FCDirection.h */,
 				25F07ED118499E7200F9C5AE /* FCAppDelegate.h */,
 				25F07ED218499E7200F9C5AE /* FCAppDelegate.m */,
 				25F07EDA18499E7200F9C5AE /* MainStoryboard.storyboard */,
@@ -351,6 +353,7 @@
 				25F07EE418499E7200F9C5AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
